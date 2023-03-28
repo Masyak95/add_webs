@@ -1,14 +1,17 @@
 .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 120px;
-    height: 32px;
+    height: 40px;
     background-color: #3a165c;
     border-radius: 4px 4px ;
     text-decoration: none;
+    color: #fff;
 }
 
 .button__text{
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    color: #fff;
     position: relative;
     letter-spacing: 1px;
 }

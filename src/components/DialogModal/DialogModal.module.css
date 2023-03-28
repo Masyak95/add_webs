@@ -23,7 +23,7 @@
     color: black;
     max-width: 620px;
     height: 198px;
-    padding: 10px;
+    /*padding: 10px;*/
     position: relative;
 }
 
@@ -32,13 +32,19 @@
     color: white;
     font-size: 20px;
     margin: 0 0 1em 0;
+    line-height: 50px;
+    padding-left: 10px;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px ;
 }
 
 .dialog__btn{
     position: absolute;
     right: 10px;
     bottom: 10px;
+
 }
 p{
     padding-bottom: 10px;
+    padding-left: 10px;
 }

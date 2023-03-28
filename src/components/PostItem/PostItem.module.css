@@ -8,7 +8,11 @@
 }
 .buttoncard{
     background-color: white;
-    color: black;
+    color: #482070;
+
+}
+.buttoncard:hover {
+    background-color: #fdf9f9;
 }
 .cardtitle{
 

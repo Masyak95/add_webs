@@ -22,9 +22,7 @@ const PostItem = (props: PostItemPropsType) => {
                     <div className={s.cardbody}>{props.post.body}</div>
                     <a href={props.post.href}>Zobrazit web</a>
                 </div>
-                <div className={s.buttoncard}>
-                    <Button title={"Smazat"} onClick={()=>props.remove(props.post)} pathToPage={'/profile'}/>
-                </div>
+                <Button title={"Smazat"} onClick={()=>props.remove(props.post)} pathToPage={'/profile'} newClass={s.buttoncard}/>
             </div>
     );
 };
