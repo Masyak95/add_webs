@@ -1,0 +1,28 @@
+.postform__container {
+    border-radius: 10px;
+    gap: 5px;
+
+    padding: 10px 20px;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bottoninput {
+    margin-top: 10px
+}
+
+.input {
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.textarea {
+
+}
+
+textarea {
+    border: 1px solid #9d9c9c;
+    width: 460px;
+    min-height: 50px;
+    resize: vertical;
+}

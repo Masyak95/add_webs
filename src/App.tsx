@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import s from './App.module.css';
+import {PostType} from "./components/PostItem/PostItem";
+import PostList from "./components/PostList/PostList";
+import PostForm from "./components/PostForm/PostForm";
+import Header from "./components/Header/Header";
+import Buttons from "./components/Buttons/Buttons";
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import Another from "./components/Error/Another";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [cards, setCards] = useState<PostType[]>([
+        {id: 1, title: "Oficiální web Vue.js", body: "Oficiální web Vue.js dokumentace", href: "https://vuejs.org/"},
+        {id: 2, title: "Google", body: "Vyhledáváč", href: "https://www.google.cz/"}
+    ])
+
+    const createPost = (newPost: PostType) => {
+        setCards([...cards, newPost])
+    }
+
+    const removePost = (card: PostType) => {
+        setCards(cards.filter(c => c.id !== card.id))
+    }
+
+    return (
+        <BrowserRouter>
+            <div className={s.app}>
+                <div className={s.app__container}>
+                    <Header/>
+                    <div className={s.wrap}>
+                        <Buttons/>
+                        <Routes>
+                            <Route path="/add" element={<PostForm create={createPost}/>}/>
+                            {cards.length !== 0
+                                ? <Route path="/profile" element={<PostList remove={removePost} posts={cards}/>}/>
+                                : <Route path="/profile" element={<Another/>}/>
+                            }
+                        </Routes>
+                    </div>
+                </div>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;

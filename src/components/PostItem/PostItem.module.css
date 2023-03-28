@@ -1,0 +1,23 @@
+.card__container {
+    margin: initial;
+    border-radius: 10px;
+    padding: 20px 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+}
+.buttoncard{
+    background-color: white;
+    color: black;
+}
+.cardtitle{
+
+}
+
+a{
+    text-decoration: none;
+}
+
+h3{
+    padding-bottom: 9px;
+}

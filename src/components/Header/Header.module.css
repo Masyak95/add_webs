@@ -1,0 +1,21 @@
+.header {
+    /*border: 1px solid red;*/
+    margin-bottom: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #3a165c;
+
+
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+}
