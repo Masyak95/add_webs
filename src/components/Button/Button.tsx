@@ -3,15 +3,16 @@ import s from "./Button.module.css"
 
 type PropsButton = {
     title: string,
-    onClick?: any,
-    pathToPage?: string
+    onClick?: () => void,
+    pathToPage?: string,
     newClass?: string
 }
-const MyButton = ({...props}: PropsButton) => {
+
+const MyButton: React.FC<PropsButton> = ({title, onClick, pathToPage, newClass}) => {
 
     return (
-        <button onClick={props.onClick} className={`${s.button} ${props.newClass}`}>
-            <span className={s.button__text}>{props.title}</span>
+        <button onClick={onClick} className={`${s.button} ${newClass}`}>
+            <span className={s.button__text}>{title}</span>
         </button>
     );
 };
