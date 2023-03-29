@@ -32,9 +32,11 @@ function App() {
                         <Buttons />
                         <Routes>
                             <Route path="/add" element={<PostForm create={createPost} />} />
-                            <Route path="/profile" element={cards.length !== 0 ? <PostList remove={removePost} posts={cards} /> : <Another />} />
+                            <Route path="/add_webs" element={<PostList remove={removePost} posts={cards}/>}/>
+                            <Route path="/profile/*" element={cards.length !== 0 ? <PostList remove={removePost} posts={cards} /> : <Another />} />
                             <Route path="/" element={<PostList remove={removePost} posts={cards} />} />
                         </Routes>
+
                     </div>
                 </div>
             </div>
